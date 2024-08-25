@@ -16,9 +16,6 @@ export const Header = ({ scrollPosition }) => {
 			<nav className={style.nav_container}>
 				<ul>
 					<li>
-						<a>About me</a>
-					</li>
-					<li>
 						<a>Resume</a>
 					</li>
 					<li>

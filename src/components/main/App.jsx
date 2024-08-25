@@ -2,7 +2,7 @@ import style from "./style.module.scss";
 import { Header } from "../header/Header";
 import { HeroSection } from "../hero-section/HeroSection";
 import { useEffect, useState } from "react";
-import { About } from "../about/About";
+import { Resume } from "../resume/Resume";
 
 function App() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -32,7 +32,7 @@ function App() {
 				<Header scrollPosition={scrollPosition} />
 				<HeroSection scrollPosition={scrollPosition} />
 			</div>
-			<About />
+			<Resume />
 		</div>
 	);
 }

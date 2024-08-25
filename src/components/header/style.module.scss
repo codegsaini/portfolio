@@ -8,6 +8,7 @@
 	position: fixed;
 	transition: 0.2s;
 	border-bottom: 1px solid #ffffff;
+	z-index: 999;
 }
 .collapsed_header {
 	height: 60px;

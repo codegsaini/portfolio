@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import pic from "../../assets/pic.png";
 import style from "./style.module.scss";
 
 export const HeroSection = ({ scrollPosition }) => {
@@ -20,8 +21,38 @@ export const HeroSection = ({ scrollPosition }) => {
 					scrolled ? style.scrolled_main_container : "",
 				].join(" ")}
 			>
-				<h2>Hi, I am Amit Sharma</h2>
-				<h3>Software Engineer</h3>
+				<div className={style.picture_container}>
+					<img src={pic} alt="Amit Sharma" />
+				</div>
+				<div className={style.about_container}>
+					<p style={{ textTransform: "uppercase", fontWeight: "700" }}>
+						About me
+					</p>
+					<h4>
+						Hello, I{"'"}m <br /> Amit Sharma, A <br /> Frontend Engineer
+					</h4>
+					<div className={style.about_item}>
+						<img src="#" alt="s" />
+						<div>
+							<h5>5k+ projects</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Voluptas, libero!
+							</p>
+						</div>
+					</div>
+					<div className={style.about_item}>
+						<img src="#" alt="s" />
+						<div>
+							<h5>5k+ projects</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Voluptas, libero!
+							</p>
+						</div>
+					</div>
+					<button>Resume</button>
+				</div>
 			</div>
 		</div>
 	);

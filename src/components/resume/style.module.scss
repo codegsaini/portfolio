@@ -1,0 +1,130 @@
+.container {
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+}
+.enlarged_resume {
+	position: fixed;
+	top: 0;
+	display: flex;
+	z-index: 9999;
+	width: 100vw;
+	height: 100vh;
+	background-color: #0000009f;
+	justify-content: center;
+	img {
+		z-index: 98;
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		align-self: center;
+		object-fit: scale-down;
+	}
+	button {
+		position: absolute;
+		z-index: 99;
+		top: 20px;
+		right: 50px;
+		width: 50px;
+		aspect-ratio: 1;
+		border-radius: 100%;
+		border: none;
+		cursor: pointer;
+		box-shadow: 5px 5px 20px -5px #0000009f;
+		transition: 0.2s;
+		font-size: 22px;
+		line-height: 50px;
+		text-align: center;
+		&:hover {
+			background-color: #dbdbdb;
+		}
+	}
+}
+.resume_container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	transition: 0.2s;
+	position: relative;
+
+	&:has(.resume:hover) {
+		background-color: rgba(206, 206, 206, 0.274);
+	}
+
+	.resume {
+		position: absolute;
+		width: 70%;
+		aspect-ratio: 0.75;
+		background-color: #fff;
+		align-self: center;
+		cursor: pointer;
+		border: 1px solid #f0f0f0;
+		transition: 0.2s;
+
+		&:hover {
+			border: 1px solid #ffcd03;
+			filter: blur(1px);
+		}
+		&:hover + p {
+			opacity: 1;
+		}
+	}
+	p {
+		pointer-events: none;
+		opacity: 0;
+		position: absolute;
+		align-self: center;
+		font-size: 40px;
+		font-weight: 900;
+		transition: 0.3s;
+	}
+}
+
+.resume_overview_container {
+	flex: 1;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 50px;
+
+	h2 {
+		font-size: 50px;
+		font-weight: 900;
+		border-bottom: 5px solid #ffcd03;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		list-style: circle;
+		row-gap: 10px;
+	}
+	li {
+		p {
+			text-align: justify;
+			font-size: 17px;
+		}
+	}
+	button {
+		background: linear-gradient(to bottom, #ffe169, #ffcd03, #f3c303);
+		border: none;
+		border-radius: 20px;
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		box-shadow: 5px 5px 20px -10px #0000006c;
+		transition: 0.1s;
+
+		&:hover {
+			box-shadow: 1px 1px 20px -10px #0000006c;
+		}
+		&:active {
+			background: linear-gradient(to top, #ffe169, #ffcd03, #ffce0a);
+		}
+	}
+}
