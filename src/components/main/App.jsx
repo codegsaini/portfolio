@@ -3,6 +3,7 @@ import { Header } from "../header/Header";
 import { HeroSection } from "../hero-section/HeroSection";
 import { useEffect, useState } from "react";
 import { Resume } from "../resume/Resume";
+import { Skills } from "../skills/Skills";
 
 function App() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -33,6 +34,7 @@ function App() {
 				<HeroSection scrollPosition={scrollPosition} />
 			</div>
 			<Resume />
+			<Skills />
 		</div>
 	);
 }
