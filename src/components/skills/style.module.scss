@@ -6,7 +6,7 @@
 }
 
 .skill_container {
-	flex: 0.3;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	padding: 100px 0;
@@ -40,7 +40,7 @@
 }
 .certificate_container {
 	position: relative;
-	flex: 0.7;
+	width: 70%;
 	background-color: #f7f7f7;
 	display: flex;
 	justify-content: center;
@@ -149,4 +149,114 @@
 	background-color: #ffcd03;
 	border-radius: 20px;
 	transition: 0.05s;
+}
+
+@media only screen and (max-width: 720px) {
+	.container {
+		width: 100%;
+		min-height: 0;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.skill_container {
+		width: 100%;
+		padding: 50px 0;
+		background-color: #ffcd03;
+	}
+	.skill_container > h2 {
+		font-size: 25px;
+		font-weight: 600;
+		margin: 20px;
+		border-bottom: 3px solid #000000;
+	}
+	.skills_wrapper {
+		margin: 0 20px;
+	}
+	.skill {
+		display: flex;
+		align-items: baseline;
+		column-gap: 5px;
+
+		p:nth-child(1) {
+			font-size: 22px;
+			font-weight: 700;
+		}
+		p:nth-child(2) {
+		}
+	}
+	.certificate_container {
+		padding: 100px 0;
+		position: relative;
+		width: 100%;
+		background-color: #f7f7f7;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		button {
+			border: none;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 100;
+			padding: 20px;
+			position: absolute;
+		}
+	}
+	.prev_button {
+		left: 0;
+		background: linear-gradient(to right, #ffcd03, #ffcd03, #ffffff00);
+	}
+	.next_button {
+		right: 0;
+		background: linear-gradient(to left, #ffcd03, #ffcd03, #ffffff00);
+	}
+	.certificate_slide_container {
+		width: 100%;
+		height: 100%;
+		column-gap: 20px;
+
+		div {
+			img {
+				width: 100%;
+			}
+			p {
+				padding: 5px 10px;
+				background: linear-gradient(to top, #ffcd03, #ffcd03, #7a704700);
+			}
+		}
+
+		div:nth-child(1) {
+			width: 100px;
+			margin-left: -50px;
+		}
+		div:nth-child(2) {
+			img {
+				border: 2px solid #ffcd03;
+
+				&:hover {
+					filter: blur(1px);
+				}
+				&:hover + label {
+					opacity: 1;
+				}
+			}
+			label {
+				font-size: 30px;
+			}
+		}
+		div:nth-child(3) {
+			width: 100px;
+			height: 100%;
+			margin-right: -50px;
+		}
+	}
+	.indicator_container {
+		height: 7px;
+		column-gap: 7px;
+	}
+	.indicator {
+		width: 30px;
+		height: 5px;
+	}
 }

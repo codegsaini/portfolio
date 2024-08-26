@@ -56,3 +56,25 @@ a {
 		border-bottom: 3px solid #ffcd03;
 	}
 }
+
+@media only screen and (max-width: 720px) {
+	.container {
+		height: 70px;
+		padding: 30px 20px;
+		column-gap: 50px;
+	}
+	.collapsed_header {
+		height: 60px;
+	}
+	.heading {
+		width: 150px;
+	}
+
+	.nav_container {
+		display: none;
+	}
+
+	a {
+		display: none;
+	}
+}

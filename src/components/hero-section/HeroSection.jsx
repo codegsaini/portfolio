@@ -29,7 +29,8 @@ export const HeroSection = ({ scrollPosition }) => {
 						About me
 					</p>
 					<h4>
-						Hello, I{"'"}m <br /> Amit Sharma, A <br /> Frontend Engineer
+						Hi, I{"'"}m <br /> Amit Sharma
+						<br /> Frontend Engineer
 					</h4>
 					<div className={style.about_item}>
 						<img src="#" alt="s" />
