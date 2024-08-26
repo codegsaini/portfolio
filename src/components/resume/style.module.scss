@@ -1,48 +1,12 @@
 .container {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background-color: #fff;
 	background-size: contain;
 	background-position: center;
 	display: flex;
 }
-.enlarged_resume {
-	position: fixed;
-	top: 0;
-	display: flex;
-	z-index: 9999;
-	width: 100vw;
-	height: 100vh;
-	background-color: #0000009f;
-	justify-content: center;
-	img {
-		z-index: 98;
-		position: absolute;
-		max-width: 100%;
-		max-height: 100%;
-		align-self: center;
-		object-fit: scale-down;
-	}
-	button {
-		position: absolute;
-		z-index: 99;
-		top: 20px;
-		right: 50px;
-		width: 50px;
-		aspect-ratio: 1;
-		border-radius: 100%;
-		border: none;
-		cursor: pointer;
-		box-shadow: 5px 5px 20px -5px #0000009f;
-		transition: 0.2s;
-		font-size: 22px;
-		line-height: 50px;
-		text-align: center;
-		&:hover {
-			background-color: #dbdbdb;
-		}
-	}
-}
+
 .resume_container {
 	flex: 1;
 	display: flex;

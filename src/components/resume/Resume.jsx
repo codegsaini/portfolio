@@ -1,47 +1,14 @@
-import { useEffect, useState } from "react";
 import bg from "../../assets/bg.jpg";
 import resume from "../../assets/resume.jpg";
 import style from "./style.module.scss";
+import { useModalState } from "../util/ModalState";
 
-const useModalState = (hash) => {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const showModal = (show) => {
-		if (show) {
-			window.location.assign(hash);
-		} else {
-			window.history.go(-1);
-		}
-	};
-
-	const onHashChange = () => {
-		setIsOpen(window.location.hash === hash);
-	};
-
-	useEffect(() => {
-		window.addEventListener("hashchange", onHashChange);
-		return () => {
-			window.removeEventListener("hashchange", onHashChange);
-		};
-	}, [hash]);
-
-	return [isOpen, showModal];
-};
-
-export const Resume = () => {
-	const [enlarged, enlargeResume] = useModalState("#enlarged_resume");
-
+export const Resume = ({ showImagePreview }) => {
 	return (
 		<div className={style.container} style={{ backgroundImage: `url(${bg})` }}>
-			{enlarged && (
-				<div className={style.enlarged_resume}>
-					<img src={resume} alt="Resume" />
-					<button onClick={() => enlargeResume(false)}>✖</button>
-				</div>
-			)}
 			<div
 				className={style.resume_container}
-				onClick={() => enlargeResume(true)}
+				onClick={() => showImagePreview(resume)}
 			>
 				<img className={style.resume} src={resume} alt="Resume Image" />
 				<p>Click to enlarge</p>
