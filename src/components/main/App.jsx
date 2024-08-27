@@ -6,6 +6,7 @@ import { Resume } from "../resume/Resume";
 import { Skills } from "../skills/Skills";
 import { useImagePreviewState } from "../util/ImagePreviewState";
 import { ExperienceTimeline } from "../experience/ExperienceTimeline";
+import { Contact } from "../contact/Contact";
 
 function App() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -46,6 +47,7 @@ function App() {
 			<Resume showImagePreview={setImagePreview} />
 			<Skills showImagePreview={setImagePreview} />
 			<ExperienceTimeline />
+			<Contact />
 		</div>
 	);
 }

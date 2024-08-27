@@ -6,6 +6,11 @@ export const Header = ({ scrollPosition }) => {
 		if (scrollPosition > 0) setScrolled(true);
 		if (scrollPosition < 0.001) setScrolled(false);
 	}, [scrollPosition]);
+
+	const onNavClick = (section) => {
+		window.location.href = section;
+	};
+
 	return (
 		<div
 			className={[style.container, scrolled ? style.collapsed_header : ""].join(
@@ -16,16 +21,16 @@ export const Header = ({ scrollPosition }) => {
 			<nav className={style.nav_container}>
 				<ul>
 					<li>
-						<a>Resume</a>
+						<a onClick={() => onNavClick("#resume")}>Resume</a>
 					</li>
 					<li>
-						<a>Skills</a>
+						<a onClick={() => onNavClick("#skills")}>Skills</a>
 					</li>
 					<li>
-						<a>Experience</a>
+						<a onClick={() => onNavClick("#experience")}>Experience</a>
 					</li>
 					<li>
-						<a>Contact</a>
+						<a onClick={() => onNavClick("#contact")}>Contact</a>
 					</li>
 				</ul>
 			</nav>

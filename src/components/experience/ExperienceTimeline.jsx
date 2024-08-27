@@ -30,7 +30,7 @@ const experienceList = [
 
 export const ExperienceTimeline = () => {
 	return (
-		<div className={style.container}>
+		<div className={style.container} id="experience">
 			<h2 className={style.section_label}>Experience</h2>
 			<div className={style.timeline_wrapper}>
 				{experienceList.map((experience, index) => {

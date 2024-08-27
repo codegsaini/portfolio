@@ -5,7 +5,11 @@ import { useModalState } from "../util/ModalState";
 
 export const Resume = ({ showImagePreview }) => {
 	return (
-		<div className={style.container} style={{ backgroundImage: `url(${bg})` }}>
+		<div
+			className={style.container}
+			style={{ backgroundImage: `url(${bg})` }}
+			id="resume"
+		>
 			<div
 				className={style.resume_container}
 				onClick={() => showImagePreview(resume)}

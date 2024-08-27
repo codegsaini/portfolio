@@ -65,7 +65,7 @@ export const Skills = ({ showImagePreview }) => {
 	};
 
 	return (
-		<div className={style.container}>
+		<div className={style.container} id="skills">
 			<div className={style.skill_container}>
 				<h2>Skills</h2>
 				<div className={style.skills_wrapper}>
