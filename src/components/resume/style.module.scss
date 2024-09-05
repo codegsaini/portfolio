@@ -63,6 +63,7 @@
 	}
 
 	ul {
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		list-style: circle;
@@ -70,7 +71,6 @@
 	}
 	li {
 		p {
-			text-align: justify;
 			font-size: 17px;
 		}
 	}
@@ -116,11 +116,11 @@
 		}
 
 		ul {
+			width: 80%;
 			row-gap: 5px;
 		}
 		li {
 			p {
-				text-align: justify;
 				font-size: 17px;
 			}
 		}

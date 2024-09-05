@@ -2,8 +2,9 @@ import style from "./style.module.scss";
 import fb from "../../assets/facebook.png";
 import x from "../../assets/twitter.png";
 import insta from "../../assets/instagram.png";
+import Particle from "../util/Particles";
 
-export const Contact = () => {
+export const Contact = ({ particleInit }) => {
 	return (
 		<div className={style.container} id="contact">
 			<h2 className={style.section_label}>Get in touch</h2>

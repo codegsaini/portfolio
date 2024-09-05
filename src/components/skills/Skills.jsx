@@ -1,22 +1,25 @@
 import style from "./style.module.scss";
-import resume from "../../assets/resume.jpg";
 import { useEffect, useState } from "react";
+import cert1 from "../../cert/certificate (1).jpg";
+import cert2 from "../../cert/certificate (2).jpg";
+import cert3 from "../../cert/certificate (3).jpg";
+import cert4 from "../../cert/certificate (4).jpg";
 
 const certificates = [
 	{
-		image: resume,
+		image: cert1,
 		title: "Certificate",
 	},
 	{
-		image: resume,
+		image: cert2,
 		title: "Certificate",
 	},
 	{
-		image: resume,
+		image: cert3,
 		title: "Certificate",
 	},
 	{
-		image: resume,
+		image: cert4,
 		title: "Certificate",
 	},
 ];
@@ -50,10 +53,6 @@ const skills = [
 
 export const Skills = ({ showImagePreview }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
-
-	useEffect(() => {
-		console.log(currentIndex);
-	}, [currentIndex]);
 
 	const onPrevClick = () => {
 		if (currentIndex > 0) setCurrentIndex(currentIndex - 1);

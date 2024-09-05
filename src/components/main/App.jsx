@@ -7,17 +7,27 @@ import { Skills } from "../skills/Skills";
 import { useImagePreviewState } from "../util/ImagePreviewState";
 import { ExperienceTimeline } from "../experience/ExperienceTimeline";
 import { Contact } from "../contact/Contact";
+import { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 function App() {
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const [showPreview, imagePreview, setImagePreview] =
 		useImagePreviewState(null);
 
+	const [particleInit, setParticleInit] = useState(false);
+
 	useEffect(() => {
-		window.addEventListener("scroll", onScrollChange);
-		return () => {
-			window.removeEventListener("scroll", onScrollChange);
-		};
+		initParticlesEngine(async (engine) => {
+			await loadSlim(engine);
+		}).then(() => {
+			setParticleInit(true);
+		});
+
+		// window.addEventListener("scroll", onScrollChange);
+		// return () => {
+		// 	window.removeEventListener("scroll", onScrollChange);
+		// };
 	}, []);
 
 	const onScrollChange = () => {
@@ -42,12 +52,13 @@ function App() {
 			)}
 			<div className={style.header_section_container}>
 				<Header scrollPosition={scrollPosition} />
-				<HeroSection scrollPosition={scrollPosition} />
+				<HeroSection scrollPosition={scrollPosition} particleInit />
 			</div>
-			<Resume showImagePreview={setImagePreview} />
 			<Skills showImagePreview={setImagePreview} />
+
+			<Resume showImagePreview={setImagePreview} />
 			<ExperienceTimeline />
-			<Contact />
+			<Contact particleInit />
 		</div>
 	);
 }

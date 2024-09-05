@@ -7,8 +7,6 @@ export const useModalState = (hash) => {
 		if (show) {
 			window.location.assign(hash);
 		} else {
-			console.log(hash);
-
 			if (window.location.hash === hash) window.history.go(-1);
 		}
 	};
