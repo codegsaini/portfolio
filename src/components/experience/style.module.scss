@@ -19,6 +19,24 @@
 	width: 100%;
 	display: flex;
 
+	.experience_time {
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0;
+		background-color: #ffffff79;
+		padding: 3px 7px;
+		border-radius: 5px;
+		margin: 5px 0;
+	}
+	.experience_title {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.experience_desc {
+		field-sizing: 15px;
+		font-weight: 300;
+	}
+
 	div:nth-child(1),
 	div:nth-child(3) {
 		flex: 1;

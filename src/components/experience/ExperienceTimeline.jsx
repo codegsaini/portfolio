@@ -47,8 +47,9 @@ const Experience = ({ index, title, desc, timespan }) => {
 			<div>
 				{index % 2 === 0 && (
 					<div>
-						<h3>{title}</h3>
-						<p>{desc}</p>
+						<h3 className={style.experience_time}>{timespan}</h3>
+						<h3 className={style.experience_title}>{title}</h3>
+						<p className={style.experience_desc}>{desc}</p>
 					</div>
 				)}
 			</div>
@@ -60,8 +61,9 @@ const Experience = ({ index, title, desc, timespan }) => {
 			<div>
 				{index % 2 !== 0 && (
 					<div>
-						<h3>{title}</h3>
-						<p>{desc}</p>
+						<h3 className={style.experience_time}>{timespan}</h3>
+						<h3 className={style.experience_title}>{title}</h3>
+						<p className={style.experience_desc}>{desc}</p>
 					</div>
 				)}
 			</div>

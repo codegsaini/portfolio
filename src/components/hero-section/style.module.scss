@@ -4,20 +4,13 @@
 	background-color: #ffffff;
 	flex: 1;
 	transition: 0.1s linear;
-}
-.collapsed_container {
-	padding: 0;
-	padding-top: 60px;
-}
-.expanded_container {
-	padding: 100px 50px 50px 50px;
+	padding: 100px 0;
 }
 .scrolled_main_container {
 	border: 0 !important;
 }
 .main_container {
 	width: 100%;
-	height: 100%;
 	display: flex;
 	position: relative;
 }
@@ -103,11 +96,11 @@
 	}
 }
 @media only screen and (max-width: 720px) {
+	.container {
+		padding-top: 60px;
+	}
 	.main_container {
 		flex-direction: column;
-	}
-	.expanded_container {
-		padding: 80px 15px 15px 15px;
 	}
 	.picture_container {
 		width: 100%;
@@ -116,17 +109,17 @@
 		justify-content: center;
 
 		img {
-			width: 70%;
+			width: 60%;
 			padding: 20px 0;
 		}
 	}
 	.about_container {
 		width: 100%;
-		padding: 50px 15px;
+		padding: 10px 15px;
 		row-gap: 10px;
 
 		h4 {
-			font-size: 40px;
+			font-size: 30px;
 			font-weight: 800;
 			letter-spacing: 0;
 		}
